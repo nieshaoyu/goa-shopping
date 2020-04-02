@@ -1,0 +1,45 @@
+# 调试模式：生产环境请关闭此项
+debug: true
+logger:
+  # 可选 info  error warn debug
+  level: debug
+  # output: stderr
+database:
+  dsn: root:123456@(127.0.0.1:3306)/shop?charset=utf8mb4&parseTime=True&loc=Local
+  # db sql log
+  LogMode: true
+  MaxIdleConns: 0
+  MaxOpenConns: 0
+  ConnMaxLifetime: 0
+
+server:
+  http_port: 8080
+
+jwt:
+  secret: d91971dda29c540d51772f9e95137c91a2a0b5ad
+
+sms:
+  app_id:
+  app_secret: ""
+  sign: ""
+
+verify_code:
+  tpl_id:
+  mock_code:
+
+sms_notify:
+  approved_tpl_id:
+  rejected_tpl_id:
+  deadline_tpl_id:
+  corp_completed:
+  material_approved:
+
+email:
+  username: "example@email.com"
+  # smtp服务器地址
+  host: ""
+  # 端口
+  port: 465
+  password: "password"
+  # 发件人
+  sender: "name<username@gmail.com>"

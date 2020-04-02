@@ -1,0 +1,44 @@
+// Code generated with goa v3.1.1, DO NOT EDIT.
+//
+// auth protocol buffer definition
+//
+// Command:
+// $ goa gen goa-shopping/design
+
+syntax = "proto3";
+
+package auth;
+
+option go_package = "authpb";
+
+// 用户服务
+service Auth {
+	// 请求电子邮箱验证码
+	rpc RequestEmailCode (RequestEmailCodeRequest) returns (RequestEmailCodeResponse);
+	// 请求短信验证码
+	rpc RequestSmSCode (RequestSmSCodeRequest) returns (RequestSmSCodeResponse);
+}
+
+message RequestEmailCodeRequest {
+	// 电子邮箱
+	string email = 1;
+	// 操作
+	string action = 2;
+}
+
+message RequestEmailCodeResponse {
+	// success
+	bool ok = 1;
+}
+
+message RequestSmSCodeRequest {
+	// 手机号码
+	string mobile = 1;
+	// 操作
+	string action = 2;
+}
+
+message RequestSmSCodeResponse {
+	// success
+	bool ok = 1;
+}
