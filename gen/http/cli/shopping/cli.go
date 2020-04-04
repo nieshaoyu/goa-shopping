@@ -267,7 +267,7 @@ func shopGetGoodsUsage() {
     -jwt-token STRING: 
 
 Example:
-    `+os.Args[0]+` shop get-goods --goods-id "ac" --jwt-token "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9..."
+    `+os.Args[0]+` shop get-goods --goods-id "3" --jwt-token "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9..."
 `, os.Args[0])
 }
 
@@ -283,7 +283,7 @@ Example:
     `+os.Args[0]+` shop update-goods --body '{
       "description": "水果x刘海屏就很丑",
       "name": "水果x"
-   }' --goods-id "nu2" --jwt-token "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9..."
+   }' --goods-id "4ca" --jwt-token "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9..."
 `, os.Args[0])
 }
 
@@ -326,7 +326,7 @@ func authGetUserInfoUsage() {
     -jwt-token STRING: 
 
 Example:
-    `+os.Args[0]+` auth get-user-info --jwt-token "Neque magni."
+    `+os.Args[0]+` auth get-user-info --jwt-token "Aut sit voluptatibus nulla."
 `, os.Args[0])
 }
 
@@ -338,10 +338,10 @@ func authSignUpUsage() {
 
 Example:
     `+os.Args[0]+` auth sign-up --body '{
-      "email": "18399999999",
+      "email": "ddu",
       "nickname": "2zc",
       "password": "nac",
-      "phone": "ddu",
+      "phone": "18399999999",
       "verify_code": "hrx"
    }'
 `, os.Args[0])

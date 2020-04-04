@@ -48,7 +48,7 @@ type UserInfoView struct {
 // UserView is a type that runs validations on a projected type.
 type UserView struct {
 	// ID
-	ID *string
+	ID *int
 	// 用户名
 	Username *string
 	// 昵称

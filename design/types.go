@@ -14,7 +14,7 @@ var User = ResultType("User", func() {
 	ContentType("application/json")
 
 	Attributes(func() {
-		Attribute("id", String, "ID")
+		Attribute("id", Int, "ID")
 		Attribute("username", String, "用户名")
 		Attribute("nickname", String, "昵称")
 		Attribute("mobile", String, "手机号")

@@ -143,7 +143,7 @@ type SessionResponseBody struct {
 // UserResponseBody is used to define fields on response body types.
 type UserResponseBody struct {
 	// ID
-	ID *string `form:"id,omitempty" json:"id,omitempty" xml:"id,omitempty"`
+	ID *int `form:"id,omitempty" json:"id,omitempty" xml:"id,omitempty"`
 	// 用户名
 	Username *string `form:"username,omitempty" json:"username,omitempty" xml:"username,omitempty"`
 	// 昵称

@@ -4,10 +4,12 @@ import (
 	"context"
 	"errors"
 	"fmt"
+	"strconv"
 	"time"
 
 	"github.com/dgrijalva/jwt-go"
 	"github.com/jinzhu/gorm"
+	"go.uber.org/zap"
 
 	"goa.design/goa/v3/security"
 
@@ -15,6 +17,8 @@ import (
 	"goa-shopping/dao"
 	auth "goa-shopping/gen/auth"
 	"goa-shopping/gen/log"
+	"goa-shopping/model"
+	"goa-shopping/serializer"
 )
 
 var RequestIDKey int
@@ -115,10 +119,48 @@ func (s *authsrvc) validateScopes(expected, actual []string) error {
 	return fmt.Errorf("您没有权限进行此操作")
 }
 
+// 创建jwt
+func (s *authsrvc) login(ctx context.Context, userObj model.User) *auth.Session {
+	logger := L(ctx, s.logger)
+	userID := strconv.Itoa(userObj.ID)
+
+	token, err := s.createJwtToken(userID, userObj.Type, userObj.Scopes())
+	if err != nil {
+		logger.Error("login jwt token failed", zap.Error(err))
+		return nil
+	}
+
+	return &auth.Session{
+		User: serializer.ModelUserToResult(userObj),
+		Credentials: &auth.Credentials{
+			Token:     token,
+			ExpiresIn: config.C.Jwt.ExpireIn,
+		},
+	}
+}
+
 // 使用手机号或者邮箱 + 密码登录
 func (s *authsrvc) Login(ctx context.Context, p *auth.LoginPayload) (res *auth.LoginResult, err error) {
 	res = &auth.LoginResult{}
 	s.logger.Info("auth.Login")
+
+	userDao := UserDaoFunc(ctx, dao.DB, s.logger)
+	user, err := userDao.FindUserByMobileOrEmail(p.Phone)
+	if err != nil {
+		s.logger.Error("查找用户失败", zap.Error(err))
+		if gorm.IsRecordNotFoundError(err) {
+			return nil, MakeBadRequestError(ctx, "该用户未注册")
+		}
+		return nil, MakeInternalServerError(ctx, "服务器错误")
+	}
+	// 校验密码
+	if user.Password == "" || !user.CheckPassword(p.Password, user.Password) {
+		return nil, MakeBadRequestError(ctx, "用户名或密码有误")
+	}
+
+	// 更新登录时间失败,就不做处理了...
+	_ = userDao.UpdateLoginTime(&user)
+	res.Data = s.login(ctx, user)
 	return
 }
 
@@ -135,7 +177,17 @@ func (s *authsrvc) SignUp(ctx context.Context, p *auth.SignUpPayload) (res *auth
 	s.logger.Info("auth.SignUp")
 
 	userDao := UserDaoFunc(ctx, dao.DB, s.logger)
-	_, err = userDao.CreateUser(p)
+	user, err := userDao.CreateUser(p)
+	if err != nil {
+		s.logger.Error("创建用户失败", zap.Error(err))
+		if dao.IsPGUniqueIndexErr(err) {
+			return nil, MakeBadRequestError(ctx, "用户已经存在")
+		}
+		return nil, MakeInternalServerError(ctx, "服务器错误")
+	}
+
+	session := s.login(ctx, user)
+	res = session
 	return
 }
 

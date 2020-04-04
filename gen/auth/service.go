@@ -139,7 +139,7 @@ type RequestSmSCodePayload struct {
 // 用户
 type User struct {
 	// ID
-	ID string
+	ID int
 	// 用户名
 	Username string
 	// 昵称

@@ -9,6 +9,7 @@ require (
 	github.com/gorilla/websocket v1.4.2 // indirect
 	github.com/jinzhu/configor v1.1.1
 	github.com/jinzhu/gorm v1.9.12
+	github.com/lib/pq v1.1.1
 	github.com/pkg/errors v0.9.1 // indirect
 	github.com/spf13/cobra v0.0.7
 	go.uber.org/zap v1.10.0

@@ -98,11 +98,11 @@ var _ = Service("auth", func() {
 		Description(`用户注册使用手机/邮箱+验证码注册`)
 		Payload(func() {
 			Field(1, "phone", String, "Phone", func() {
-				Format(FormatEmail)
+				Example("18399999999")
 				MaxLength(11)
 			})
 			Field(2, "email", String, "Email", func() {
-				Example("18399999999")
+				Format(FormatEmail)
 				MaxLength(120)
 			})
 			Field(3, "nickname", String, "昵称", func() {

@@ -9,3 +9,11 @@
 add grpc
 
 
+#### USEAGE
+```
+make build
+```
+```
+./bin/shop --config your_config.yml runserver
+```
+

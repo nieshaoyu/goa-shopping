@@ -144,7 +144,7 @@ type SessionResponseBody struct {
 // UserResponseBody is used to define fields on response body types.
 type UserResponseBody struct {
 	// ID
-	ID string `form:"id" json:"id" xml:"id"`
+	ID int `form:"id" json:"id" xml:"id"`
 	// 用户名
 	Username string `form:"username" json:"username" xml:"username"`
 	// 昵称
@@ -172,7 +172,7 @@ type CredentialsResponseBody struct {
 // UserResponseBodySimple is used to define fields on response body types.
 type UserResponseBodySimple struct {
 	// ID
-	ID string `form:"id" json:"id" xml:"id"`
+	ID int `form:"id" json:"id" xml:"id"`
 	// 昵称
 	Nickname string `form:"nickname" json:"nickname" xml:"nickname"`
 	// 手机号
@@ -372,12 +372,12 @@ func ValidateSignUpRequestBody(body *SignUpRequestBody) (err error) {
 		err = goa.MergeErrors(err, goa.MissingFieldError("verify_code", "body"))
 	}
 	if body.Phone != nil {
-		err = goa.MergeErrors(err, goa.ValidateFormat("body.phone", *body.Phone, goa.FormatEmail))
-	}
-	if body.Phone != nil {
 		if utf8.RuneCountInString(*body.Phone) > 11 {
 			err = goa.MergeErrors(err, goa.InvalidLengthError("body.phone", *body.Phone, utf8.RuneCountInString(*body.Phone), 11, false))
 		}
+	}
+	if body.Email != nil {
+		err = goa.MergeErrors(err, goa.ValidateFormat("body.email", *body.Email, goa.FormatEmail))
 	}
 	if body.Email != nil {
 		if utf8.RuneCountInString(*body.Email) > 120 {

@@ -342,10 +342,10 @@ definitions:
     example:
       data:
         email: Aut qui.
-        id: Aut sit voluptatibus nulla.
+        id: 2396868783163274665
         isActive: true
-        mobile: Molestiae autem sit odit assumenda.
-        nickname: Facilis iste voluptas.
+        mobile: Autem sit odit assumenda.
+        nickname: Iste voluptas id.
         type: 4978511661108952850
       errcode: 0
       errmsg: ""
@@ -396,14 +396,14 @@ definitions:
           expires_in: 25200
           token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9...
         user:
-          email: Alias non eius numquam sit incidunt nulla.
-          id: Explicabo repellat ratione aspernatur tempora sit qui.
-          isActive: false
-          loginTime: Fugiat facere.
-          mobile: Ipsa enim culpa autem rerum.
-          nickname: Nemo labore temporibus qui alias.
-          type: 2007476423008869299
-          username: Numquam sit cumque.
+          email: Sequi alias non eius numquam sit.
+          id: 2688977051774998865
+          isActive: true
+          loginTime: Id nihil fugiat facere expedita temporibus dicta.
+          mobile: Placeat ipsa enim culpa autem.
+          nickname: Sit cumque molestias nemo labore temporibus qui.
+          type: 912190292390056068
+          username: Repellat ratione aspernatur tempora sit qui voluptatem.
       errcode: 0
       errmsg: ""
     required:
@@ -546,11 +546,11 @@ definitions:
       temporary:
         type: boolean
         description: Is the error temporary?
-        example: false
+        example: true
       timeout:
         type: boolean
         description: Is the error a timeout?
-        example: false
+        example: true
     description: SignUp_bad_request_Response_Body result type (default view)
     example:
       fault: false
@@ -573,36 +573,36 @@ definitions:
       email:
         type: string
         description: Email
-        example: "18399999999"
+        example: oy4
+        format: email
         maxLength: 120
       nickname:
         type: string
         description: 昵称
-        example: f9x
+        example: tme
         maxLength: 120
       password:
         type: string
         description: 密码
-        example: fn6
+        example: h7d
         minLength: 6
       phone:
         type: string
         description: Phone
-        example: 3ui
-        format: email
+        example: "18399999999"
         maxLength: 11
       verify_code:
         type: string
         description: 验证码
-        example: 8d3
+        example: 3z5
         minLength: 4
         maxLength: 12
     example:
-      email: "18399999999"
-      nickname: xhr
-      password: gvm
-      phone: p06
-      verify_code: 7ir
+      email: 5wn
+      nickname: d3u
+      password: if9
+      phone: "18399999999"
+      verify_code: zfn
     required:
     - nickname
     - password
@@ -621,13 +621,13 @@ definitions:
         expires_in: 25200
         token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9...
       user:
-        email: Odio quos qui.
-        id: Omnis sed maiores dolorem dolores quaerat optio.
-        isActive: false
-        mobile: Possimus ipsa laborum similique tempore velit.
-        nickname: Quaerat possimus.
-        type: 5512101595163335756
-        username: Dolor quia facere.
+        email: Laborum similique tempore velit sunt odio.
+        id: 7221827914255307499
+        isActive: true
+        mobile: Possimus beatae possimus.
+        nickname: Optio natus dolor quia facere nihil.
+        type: 9049783883889597076
+        username: Sed maiores dolorem dolores.
     required:
     - user
     - credentials
@@ -661,7 +661,7 @@ definitions:
       id:
         type: integer
         description: ID
-        example: 7487309560206597432
+        example: 2387300402565235828
         format: int64
       name:
         type: string
@@ -670,7 +670,7 @@ definitions:
     description: 商品品牌
     example:
       description: 耐克描述
-      id: 2275386429741612544
+      id: 8583831439453180556
       name: 耐克
     required:
     - id
@@ -688,122 +688,158 @@ definitions:
         - description: 水果机是世界上最好的手机
           goods_brand:
             description: 耐克描述
-            id: 1579160059629799796
+            id: 3420828278549043962
             name: 耐克
           goods_sku:
           - goods_sku_value:
-            - id: 322396054482440455
+            - id: 3994674713047206281
               name: 红色
-            - id: 322396054482440455
+            - id: 3994674713047206281
               name: 红色
-            id: 3278873586745833823
+            - id: 3994674713047206281
+              name: 红色
+            id: 727292383899935217
             name: 颜色
           - goods_sku_value:
-            - id: 322396054482440455
+            - id: 3994674713047206281
               name: 红色
-            - id: 322396054482440455
+            - id: 3994674713047206281
               name: 红色
-            id: 3278873586745833823
+            - id: 3994674713047206281
+              name: 红色
+            id: 727292383899935217
             name: 颜色
           - goods_sku_value:
-            - id: 322396054482440455
+            - id: 3994674713047206281
               name: 红色
-            - id: 322396054482440455
+            - id: 3994674713047206281
               name: 红色
-            id: 3278873586745833823
-            name: 颜色
-          - goods_sku_value:
-            - id: 322396054482440455
+            - id: 3994674713047206281
               name: 红色
-            - id: 322396054482440455
-              name: 红色
-            id: 3278873586745833823
+            id: 727292383899935217
             name: 颜色
           goods_type:
             description: 男人的衣柜
-            id: 7133122405476397543
+            id: 1579160059629799796
             name: 男装
-          id: 3655886575800590283
+          id: 7133122405476397543
           name: 水果机
         - description: 水果机是世界上最好的手机
           goods_brand:
             description: 耐克描述
-            id: 1579160059629799796
+            id: 3420828278549043962
             name: 耐克
           goods_sku:
           - goods_sku_value:
-            - id: 322396054482440455
+            - id: 3994674713047206281
               name: 红色
-            - id: 322396054482440455
+            - id: 3994674713047206281
               name: 红色
-            id: 3278873586745833823
+            - id: 3994674713047206281
+              name: 红色
+            id: 727292383899935217
             name: 颜色
           - goods_sku_value:
-            - id: 322396054482440455
+            - id: 3994674713047206281
               name: 红色
-            - id: 322396054482440455
+            - id: 3994674713047206281
               name: 红色
-            id: 3278873586745833823
+            - id: 3994674713047206281
+              name: 红色
+            id: 727292383899935217
             name: 颜色
           - goods_sku_value:
-            - id: 322396054482440455
+            - id: 3994674713047206281
               name: 红色
-            - id: 322396054482440455
+            - id: 3994674713047206281
               name: 红色
-            id: 3278873586745833823
-            name: 颜色
-          - goods_sku_value:
-            - id: 322396054482440455
+            - id: 3994674713047206281
               name: 红色
-            - id: 322396054482440455
-              name: 红色
-            id: 3278873586745833823
+            id: 727292383899935217
             name: 颜色
           goods_type:
             description: 男人的衣柜
-            id: 7133122405476397543
+            id: 1579160059629799796
             name: 男装
-          id: 3655886575800590283
+          id: 7133122405476397543
           name: 水果机
         - description: 水果机是世界上最好的手机
           goods_brand:
             description: 耐克描述
-            id: 1579160059629799796
+            id: 3420828278549043962
             name: 耐克
           goods_sku:
           - goods_sku_value:
-            - id: 322396054482440455
+            - id: 3994674713047206281
               name: 红色
-            - id: 322396054482440455
+            - id: 3994674713047206281
               name: 红色
-            id: 3278873586745833823
+            - id: 3994674713047206281
+              name: 红色
+            id: 727292383899935217
             name: 颜色
           - goods_sku_value:
-            - id: 322396054482440455
+            - id: 3994674713047206281
               name: 红色
-            - id: 322396054482440455
+            - id: 3994674713047206281
               name: 红色
-            id: 3278873586745833823
+            - id: 3994674713047206281
+              name: 红色
+            id: 727292383899935217
             name: 颜色
           - goods_sku_value:
-            - id: 322396054482440455
+            - id: 3994674713047206281
               name: 红色
-            - id: 322396054482440455
+            - id: 3994674713047206281
               name: 红色
-            id: 3278873586745833823
-            name: 颜色
-          - goods_sku_value:
-            - id: 322396054482440455
+            - id: 3994674713047206281
               name: 红色
-            - id: 322396054482440455
-              name: 红色
-            id: 3278873586745833823
+            id: 727292383899935217
             name: 颜色
           goods_type:
             description: 男人的衣柜
-            id: 7133122405476397543
+            id: 1579160059629799796
             name: 男装
-          id: 3655886575800590283
+          id: 7133122405476397543
+          name: 水果机
+        - description: 水果机是世界上最好的手机
+          goods_brand:
+            description: 耐克描述
+            id: 3420828278549043962
+            name: 耐克
+          goods_sku:
+          - goods_sku_value:
+            - id: 3994674713047206281
+              name: 红色
+            - id: 3994674713047206281
+              name: 红色
+            - id: 3994674713047206281
+              name: 红色
+            id: 727292383899935217
+            name: 颜色
+          - goods_sku_value:
+            - id: 3994674713047206281
+              name: 红色
+            - id: 3994674713047206281
+              name: 红色
+            - id: 3994674713047206281
+              name: 红色
+            id: 727292383899935217
+            name: 颜色
+          - goods_sku_value:
+            - id: 3994674713047206281
+              name: 红色
+            - id: 3994674713047206281
+              name: 红色
+            - id: 3994674713047206281
+              name: 红色
+            id: 727292383899935217
+            name: 颜色
+          goods_type:
+            description: 男人的衣柜
+            id: 1579160059629799796
+            name: 男装
+          id: 7133122405476397543
           name: 水果机
       errcode:
         type: integer
@@ -821,162 +857,80 @@ definitions:
       - description: 水果机是世界上最好的手机
         goods_brand:
           description: 耐克描述
-          id: 1579160059629799796
+          id: 3420828278549043962
           name: 耐克
         goods_sku:
         - goods_sku_value:
-          - id: 322396054482440455
+          - id: 3994674713047206281
             name: 红色
-          - id: 322396054482440455
+          - id: 3994674713047206281
             name: 红色
-          id: 3278873586745833823
+          - id: 3994674713047206281
+            name: 红色
+          id: 727292383899935217
           name: 颜色
         - goods_sku_value:
-          - id: 322396054482440455
+          - id: 3994674713047206281
             name: 红色
-          - id: 322396054482440455
+          - id: 3994674713047206281
             name: 红色
-          id: 3278873586745833823
+          - id: 3994674713047206281
+            name: 红色
+          id: 727292383899935217
           name: 颜色
         - goods_sku_value:
-          - id: 322396054482440455
+          - id: 3994674713047206281
             name: 红色
-          - id: 322396054482440455
+          - id: 3994674713047206281
             name: 红色
-          id: 3278873586745833823
-          name: 颜色
-        - goods_sku_value:
-          - id: 322396054482440455
+          - id: 3994674713047206281
             name: 红色
-          - id: 322396054482440455
-            name: 红色
-          id: 3278873586745833823
+          id: 727292383899935217
           name: 颜色
         goods_type:
           description: 男人的衣柜
-          id: 7133122405476397543
+          id: 1579160059629799796
           name: 男装
-        id: 3655886575800590283
+        id: 7133122405476397543
         name: 水果机
       - description: 水果机是世界上最好的手机
         goods_brand:
           description: 耐克描述
-          id: 1579160059629799796
+          id: 3420828278549043962
           name: 耐克
         goods_sku:
         - goods_sku_value:
-          - id: 322396054482440455
+          - id: 3994674713047206281
             name: 红色
-          - id: 322396054482440455
+          - id: 3994674713047206281
             name: 红色
-          id: 3278873586745833823
+          - id: 3994674713047206281
+            name: 红色
+          id: 727292383899935217
           name: 颜色
         - goods_sku_value:
-          - id: 322396054482440455
+          - id: 3994674713047206281
             name: 红色
-          - id: 322396054482440455
+          - id: 3994674713047206281
             name: 红色
-          id: 3278873586745833823
+          - id: 3994674713047206281
+            name: 红色
+          id: 727292383899935217
           name: 颜色
         - goods_sku_value:
-          - id: 322396054482440455
+          - id: 3994674713047206281
             name: 红色
-          - id: 322396054482440455
+          - id: 3994674713047206281
             name: 红色
-          id: 3278873586745833823
-          name: 颜色
-        - goods_sku_value:
-          - id: 322396054482440455
+          - id: 3994674713047206281
             name: 红色
-          - id: 322396054482440455
-            name: 红色
-          id: 3278873586745833823
+          id: 727292383899935217
           name: 颜色
         goods_type:
           description: 男人的衣柜
-          id: 7133122405476397543
-          name: 男装
-        id: 3655886575800590283
-        name: 水果机
-      - description: 水果机是世界上最好的手机
-        goods_brand:
-          description: 耐克描述
           id: 1579160059629799796
-          name: 耐克
-        goods_sku:
-        - goods_sku_value:
-          - id: 322396054482440455
-            name: 红色
-          - id: 322396054482440455
-            name: 红色
-          id: 3278873586745833823
-          name: 颜色
-        - goods_sku_value:
-          - id: 322396054482440455
-            name: 红色
-          - id: 322396054482440455
-            name: 红色
-          id: 3278873586745833823
-          name: 颜色
-        - goods_sku_value:
-          - id: 322396054482440455
-            name: 红色
-          - id: 322396054482440455
-            name: 红色
-          id: 3278873586745833823
-          name: 颜色
-        - goods_sku_value:
-          - id: 322396054482440455
-            name: 红色
-          - id: 322396054482440455
-            name: 红色
-          id: 3278873586745833823
-          name: 颜色
-        goods_type:
-          description: 男人的衣柜
-          id: 7133122405476397543
           name: 男装
-        id: 3655886575800590283
-        name: 水果机
-      - description: 水果机是世界上最好的手机
-        goods_brand:
-          description: 耐克描述
-          id: 1579160059629799796
-          name: 耐克
-        goods_sku:
-        - goods_sku_value:
-          - id: 322396054482440455
-            name: 红色
-          - id: 322396054482440455
-            name: 红色
-          id: 3278873586745833823
-          name: 颜色
-        - goods_sku_value:
-          - id: 322396054482440455
-            name: 红色
-          - id: 322396054482440455
-            name: 红色
-          id: 3278873586745833823
-          name: 颜色
-        - goods_sku_value:
-          - id: 322396054482440455
-            name: 红色
-          - id: 322396054482440455
-            name: 红色
-          id: 3278873586745833823
-          name: 颜色
-        - goods_sku_value:
-          - id: 322396054482440455
-            name: 红色
-          - id: 322396054482440455
-            name: 红色
-          id: 3278873586745833823
-          name: 颜色
-        goods_type:
-          description: 男人的衣柜
-          id: 7133122405476397543
-          name: 男装
-        id: 3655886575800590283
+        id: 7133122405476397543
         name: 水果机
       errcode: 0
       errmsg: ""
@@ -994,18 +948,14 @@ definitions:
           $ref: '#/definitions/GoodsSkuValueResponseBody'
         description: 商品SKU规格值
         example:
-        - id: 322396054482440455
+        - id: 3994674713047206281
           name: 红色
-        - id: 322396054482440455
-          name: 红色
-        - id: 322396054482440455
-          name: 红色
-        - id: 322396054482440455
+        - id: 3994674713047206281
           name: 红色
       id:
         type: integer
         description: ID
-        example: 1325989832679285006
+        example: 7487309560206597432
         format: int64
       name:
         type: string
@@ -1014,15 +964,15 @@ definitions:
     description: 商品SKU
     example:
       goods_sku_value:
-      - id: 322396054482440455
+      - id: 3994674713047206281
         name: 红色
-      - id: 322396054482440455
+      - id: 3994674713047206281
         name: 红色
-      - id: 322396054482440455
+      - id: 3994674713047206281
         name: 红色
-      - id: 322396054482440455
+      - id: 3994674713047206281
         name: 红色
-      id: 1883767716292753139
+      id: 6445452259142062634
       name: 颜色
     required:
     - id
@@ -1034,7 +984,7 @@ definitions:
       id:
         type: integer
         description: ID
-        example: 3185204166962498619
+        example: 2275386429741612544
         format: int64
       name:
         type: string
@@ -1042,7 +992,7 @@ definitions:
         example: 红色
     description: 商品SKU规格值
     example:
-      id: 6445452259142062634
+      id: 1325989832679285006
       name: 红色
     required:
     - id
@@ -1064,32 +1014,47 @@ definitions:
         description: 商品SKU
         example:
         - goods_sku_value:
-          - id: 322396054482440455
+          - id: 3994674713047206281
             name: 红色
-          - id: 322396054482440455
+          - id: 3994674713047206281
             name: 红色
-          id: 3278873586745833823
+          - id: 3994674713047206281
+            name: 红色
+          id: 727292383899935217
           name: 颜色
         - goods_sku_value:
-          - id: 322396054482440455
+          - id: 3994674713047206281
             name: 红色
-          - id: 322396054482440455
+          - id: 3994674713047206281
             name: 红色
-          id: 3278873586745833823
+          - id: 3994674713047206281
+            name: 红色
+          id: 727292383899935217
           name: 颜色
         - goods_sku_value:
-          - id: 322396054482440455
+          - id: 3994674713047206281
             name: 红色
-          - id: 322396054482440455
+          - id: 3994674713047206281
             name: 红色
-          id: 3278873586745833823
+          - id: 3994674713047206281
+            name: 红色
+          id: 727292383899935217
+          name: 颜色
+        - goods_sku_value:
+          - id: 3994674713047206281
+            name: 红色
+          - id: 3994674713047206281
+            name: 红色
+          - id: 3994674713047206281
+            name: 红色
+          id: 727292383899935217
           name: 颜色
       goods_type:
         $ref: '#/definitions/GoodsTypeResponseBody'
       id:
         type: integer
         description: ID
-        example: 8337093483907578411
+        example: 8856099508391414520
         format: int64
       name:
         type: string
@@ -1100,28 +1065,41 @@ definitions:
       description: 水果机是世界上最好的手机
       goods_brand:
         description: 耐克描述
-        id: 1579160059629799796
+        id: 3420828278549043962
         name: 耐克
       goods_sku:
       - goods_sku_value:
-        - id: 322396054482440455
+        - id: 3994674713047206281
           name: 红色
-        - id: 322396054482440455
+        - id: 3994674713047206281
           name: 红色
-        id: 3278873586745833823
+        - id: 3994674713047206281
+          name: 红色
+        id: 727292383899935217
         name: 颜色
       - goods_sku_value:
-        - id: 322396054482440455
+        - id: 3994674713047206281
           name: 红色
-        - id: 322396054482440455
+        - id: 3994674713047206281
           name: 红色
-        id: 3278873586745833823
+        - id: 3994674713047206281
+          name: 红色
+        id: 727292383899935217
+        name: 颜色
+      - goods_sku_value:
+        - id: 3994674713047206281
+          name: 红色
+        - id: 3994674713047206281
+          name: 红色
+        - id: 3994674713047206281
+          name: 红色
+        id: 727292383899935217
         name: 颜色
       goods_type:
         description: 男人的衣柜
-        id: 7133122405476397543
+        id: 1579160059629799796
         name: 男装
-      id: 6457299077146242794
+      id: 7176190699945812695
       name: 水果机
     required:
     - id
@@ -1140,7 +1118,7 @@ definitions:
       id:
         type: integer
         description: ID
-        example: 2387300402565235828
+        example: 2316902287810990215
         format: int64
       name:
         type: string
@@ -1149,7 +1127,7 @@ definitions:
     description: 商品分类
     example:
       description: 男人的衣柜
-      id: 8583831439453180556
+      id: 8337093483907578411
       name: 男装
     required:
     - id
@@ -1169,13 +1147,13 @@ definitions:
         expires_in: 25200
         token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9...
       user:
-        email: Odio quos qui.
-        id: Omnis sed maiores dolorem dolores quaerat optio.
-        isActive: false
-        mobile: Possimus ipsa laborum similique tempore velit.
-        nickname: Quaerat possimus.
-        type: 5512101595163335756
-        username: Dolor quia facere.
+        email: Laborum similique tempore velit sunt odio.
+        id: 7221827914255307499
+        isActive: true
+        mobile: Possimus beatae possimus.
+        nickname: Optio natus dolor quia facere nihil.
+        type: 9049783883889597076
+        username: Sed maiores dolorem dolores.
     required:
     - user
     - credentials
@@ -1186,7 +1164,7 @@ definitions:
       fault:
         type: boolean
         description: Is the error a server-side fault?
-        example: false
+        example: true
       id:
         type: string
         description: ID is a unique identifier for this particular occurrence of the
@@ -1208,15 +1186,15 @@ definitions:
       timeout:
         type: boolean
         description: Is the error a timeout?
-        example: false
+        example: true
     description: GetGoods_bad_request_Response_Body result type (default view)
     example:
-      fault: false
+      fault: true
       id: 123abc
       message: parameter 'p' must be an integer
       name: bad_request
-      temporary: true
-      timeout: true
+      temporary: false
+      timeout: false
     required:
     - name
     - id
@@ -1249,11 +1227,11 @@ definitions:
       temporary:
         type: boolean
         description: Is the error temporary?
-        example: true
+        example: false
       timeout:
         type: boolean
         description: Is the error a timeout?
-        example: true
+        example: false
     description: GetGoods_internal_server_error_Response_Body result type (default
       view)
     example:
@@ -1287,39 +1265,38 @@ definitions:
         description: 商品SKU
         example:
         - goods_sku_value:
-          - id: 322396054482440455
+          - id: 3994674713047206281
             name: 红色
-          - id: 322396054482440455
+          - id: 3994674713047206281
             name: 红色
-          id: 3278873586745833823
+          - id: 3994674713047206281
+            name: 红色
+          id: 727292383899935217
           name: 颜色
         - goods_sku_value:
-          - id: 322396054482440455
+          - id: 3994674713047206281
             name: 红色
-          - id: 322396054482440455
+          - id: 3994674713047206281
             name: 红色
-          id: 3278873586745833823
+          - id: 3994674713047206281
+            name: 红色
+          id: 727292383899935217
           name: 颜色
         - goods_sku_value:
-          - id: 322396054482440455
+          - id: 3994674713047206281
             name: 红色
-          - id: 322396054482440455
+          - id: 3994674713047206281
             name: 红色
-          id: 3278873586745833823
-          name: 颜色
-        - goods_sku_value:
-          - id: 322396054482440455
+          - id: 3994674713047206281
             name: 红色
-          - id: 322396054482440455
-            name: 红色
-          id: 3278873586745833823
+          id: 727292383899935217
           name: 颜色
       goods_type:
         $ref: '#/definitions/GoodsTypeResponseBody'
       id:
         type: integer
         description: ID
-        example: 1721886835493197713
+        example: 6029538313744037721
         format: int64
       name:
         type: string
@@ -1330,28 +1307,50 @@ definitions:
       description: 水果机是世界上最好的手机
       goods_brand:
         description: 耐克描述
-        id: 1579160059629799796
+        id: 3420828278549043962
         name: 耐克
       goods_sku:
       - goods_sku_value:
-        - id: 322396054482440455
+        - id: 3994674713047206281
           name: 红色
-        - id: 322396054482440455
+        - id: 3994674713047206281
           name: 红色
-        id: 3278873586745833823
+        - id: 3994674713047206281
+          name: 红色
+        id: 727292383899935217
         name: 颜色
       - goods_sku_value:
-        - id: 322396054482440455
+        - id: 3994674713047206281
           name: 红色
-        - id: 322396054482440455
+        - id: 3994674713047206281
           name: 红色
-        id: 3278873586745833823
+        - id: 3994674713047206281
+          name: 红色
+        id: 727292383899935217
+        name: 颜色
+      - goods_sku_value:
+        - id: 3994674713047206281
+          name: 红色
+        - id: 3994674713047206281
+          name: 红色
+        - id: 3994674713047206281
+          name: 红色
+        id: 727292383899935217
+        name: 颜色
+      - goods_sku_value:
+        - id: 3994674713047206281
+          name: 红色
+        - id: 3994674713047206281
+          name: 红色
+        - id: 3994674713047206281
+          name: 红色
+        id: 727292383899935217
         name: 颜色
       goods_type:
         description: 男人的衣柜
-        id: 7133122405476397543
+        id: 1579160059629799796
         name: 男装
-      id: 4838685326929744627
+      id: 1721886835493197713
       name: 水果机
     required:
     - id
@@ -1366,7 +1365,7 @@ definitions:
       fault:
         type: boolean
         description: Is the error a server-side fault?
-        example: true
+        example: false
       id:
         type: string
         description: ID is a unique identifier for this particular occurrence of the
@@ -1384,7 +1383,7 @@ definitions:
       temporary:
         type: boolean
         description: Is the error temporary?
-        example: false
+        example: true
       timeout:
         type: boolean
         description: Is the error a timeout?
@@ -1395,8 +1394,8 @@ definitions:
       id: 123abc
       message: parameter 'p' must be an integer
       name: bad_request
-      temporary: false
-      timeout: false
+      temporary: true
+      timeout: true
     required:
     - name
     - id
@@ -1437,12 +1436,12 @@ definitions:
     description: GoodsList_internal_server_error_Response_Body result type (default
       view)
     example:
-      fault: true
+      fault: false
       id: 123abc
       message: parameter 'p' must be an integer
       name: bad_request
       temporary: false
-      timeout: true
+      timeout: false
     required:
     - name
     - id
@@ -1782,7 +1781,7 @@ definitions:
       total:
         type: integer
         description: 总记录数
-        example: 1486439835183769465
+        example: 4683385471503859208
         format: int64
     example:
       items:
@@ -2102,7 +2101,7 @@ definitions:
         errcode: 0
         errmsg: ""
       nextCursor: 100
-      total: 6465385575842473085
+      total: 1486439835183769465
     required:
     - items
     - nextCursor
@@ -2132,18 +2131,18 @@ definitions:
       temporary:
         type: boolean
         description: Is the error temporary?
-        example: false
+        example: true
       timeout:
         type: boolean
         description: Is the error a timeout?
-        example: false
+        example: true
     description: UpdateGoods_bad_request_Response_Body result type (default view)
     example:
       fault: true
       id: 123abc
       message: parameter 'p' must be an integer
       name: bad_request
-      temporary: true
+      temporary: false
       timeout: false
     required:
     - name
@@ -2159,7 +2158,7 @@ definitions:
       fault:
         type: boolean
         description: Is the error a server-side fault?
-        example: false
+        example: true
       id:
         type: string
         description: ID is a unique identifier for this particular occurrence of the
@@ -2189,8 +2188,8 @@ definitions:
       id: 123abc
       message: parameter 'p' must be an integer
       name: bad_request
-      temporary: true
-      timeout: true
+      temporary: false
+      timeout: false
     required:
     - name
     - id
@@ -2235,25 +2234,47 @@ definitions:
         description: 商品SKU
         example:
         - goods_sku_value:
-          - id: 322396054482440455
+          - id: 3994674713047206281
             name: 红色
-          - id: 322396054482440455
+          - id: 3994674713047206281
             name: 红色
-          id: 3278873586745833823
+          - id: 3994674713047206281
+            name: 红色
+          id: 727292383899935217
           name: 颜色
         - goods_sku_value:
-          - id: 322396054482440455
+          - id: 3994674713047206281
             name: 红色
-          - id: 322396054482440455
+          - id: 3994674713047206281
             name: 红色
-          id: 3278873586745833823
+          - id: 3994674713047206281
+            name: 红色
+          id: 727292383899935217
+          name: 颜色
+        - goods_sku_value:
+          - id: 3994674713047206281
+            name: 红色
+          - id: 3994674713047206281
+            name: 红色
+          - id: 3994674713047206281
+            name: 红色
+          id: 727292383899935217
+          name: 颜色
+        - goods_sku_value:
+          - id: 3994674713047206281
+            name: 红色
+          - id: 3994674713047206281
+            name: 红色
+          - id: 3994674713047206281
+            name: 红色
+          id: 727292383899935217
           name: 颜色
       goods_type:
         $ref: '#/definitions/GoodsTypeResponseBody'
       id:
         type: integer
         description: ID
-        example: 113221754232817214
+        example: 730114312929382162
         format: int64
       name:
         type: string
@@ -2264,35 +2285,32 @@ definitions:
       description: 水果机是世界上最好的手机
       goods_brand:
         description: 耐克描述
-        id: 1579160059629799796
+        id: 3420828278549043962
         name: 耐克
       goods_sku:
       - goods_sku_value:
-        - id: 322396054482440455
+        - id: 3994674713047206281
           name: 红色
-        - id: 322396054482440455
+        - id: 3994674713047206281
           name: 红色
-        id: 3278873586745833823
+        - id: 3994674713047206281
+          name: 红色
+        id: 727292383899935217
         name: 颜色
       - goods_sku_value:
-        - id: 322396054482440455
+        - id: 3994674713047206281
           name: 红色
-        - id: 322396054482440455
+        - id: 3994674713047206281
           name: 红色
-        id: 3278873586745833823
-        name: 颜色
-      - goods_sku_value:
-        - id: 322396054482440455
+        - id: 3994674713047206281
           name: 红色
-        - id: 322396054482440455
-          name: 红色
-        id: 3278873586745833823
+        id: 727292383899935217
         name: 颜色
       goods_type:
         description: 男人的衣柜
-        id: 7133122405476397543
+        id: 1579160059629799796
         name: 男装
-      id: 3465519874152322210
+      id: 113221754232817214
       name: 水果机
     required:
     - id
@@ -2307,41 +2325,42 @@ definitions:
       email:
         type: string
         description: 邮箱
-        example: Qui cumque omnis sunt.
+        example: Repellat repellendus.
       id:
-        type: string
+        type: integer
         description: ID
-        example: Ipsam magni qui pariatur.
+        example: 2679454387351194153
+        format: int64
       isActive:
         type: boolean
         description: 是否可用
-        example: false
+        example: true
       mobile:
         type: string
         description: 手机号
-        example: Omnis repellat repellendus hic omnis.
+        example: Culpa perspiciatis.
       nickname:
         type: string
         description: 昵称
-        example: Distinctio ab culpa.
+        example: Qui pariatur iste et nostrum omnis distinctio.
       type:
         type: integer
         description: 类型：1 用户， 2 管理员
-        example: 4076481307820481279
+        example: 9074247969779885828
         format: int64
       username:
         type: string
         description: 用户名
-        example: Et nostrum.
+        example: Quas ipsam.
     description: 用户
     example:
-      email: Voluptatem deleniti sequi perspiciatis cupiditate.
-      id: Quam et est laboriosam ut.
-      isActive: true
-      mobile: Nostrum odit deserunt at.
-      nickname: Sequi quia facere cumque rerum.
-      type: 8515780423597143105
-      username: Quis libero velit illum labore.
+      email: Illum labore deserunt sequi quia facere.
+      id: 7844018293105430970
+      isActive: false
+      mobile: Laboriosam ut aspernatur quis libero.
+      nickname: Dolorum et quam et.
+      type: 5097860345132755240
+      username: Cumque omnis sunt.
     required:
     - id
     - username
@@ -2358,36 +2377,37 @@ definitions:
       email:
         type: string
         description: 邮箱
-        example: Esse mollitia maiores et pariatur esse.
+        example: A voluptas nulla.
       id:
-        type: string
+        type: integer
         description: ID
-        example: Tempora non a.
+        example: 4461740467323362842
+        format: int64
       isActive:
         type: boolean
         description: 是否可用
-        example: false
+        example: true
       mobile:
         type: string
         description: 手机号
-        example: Nulla et saepe similique atque.
+        example: Sequi perspiciatis cupiditate impedit in voluptatum tempora.
       nickname:
         type: string
         description: 昵称
-        example: Nulla qui distinctio corrupti eveniet aut.
+        example: Odit deserunt at repellendus voluptatem.
       type:
         type: integer
         description: 类型：1 用户， 2 管理员
-        example: 6343364308535236732
+        example: 2033113462511449222
         format: int64
     description: 用户 (default view)
     example:
-      email: Omnis iure.
-      id: Dignissimos ut mollitia et fugit eum amet.
+      email: Esse mollitia maiores et pariatur esse.
+      id: 3448042631167171046
       isActive: false
-      mobile: Molestiae et ab.
-      nickname: Recusandae nam libero.
-      type: 3488167164065706687
+      mobile: Saepe similique atque.
+      nickname: Aut ipsam nulla.
+      type: 6343364308535236732
     required:
     - id
     - nickname

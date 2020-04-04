@@ -73,15 +73,15 @@ func BuildSignUpPayload(authSignUpBody string) (*auth.SignUpPayload, error) {
 	{
 		err = json.Unmarshal([]byte(authSignUpBody), &body)
 		if err != nil {
-			return nil, fmt.Errorf("invalid JSON for body, example of valid JSON:\n%s", "'{\n      \"email\": \"18399999999\",\n      \"nickname\": \"2zc\",\n      \"password\": \"nac\",\n      \"phone\": \"ddu\",\n      \"verify_code\": \"hrx\"\n   }'")
-		}
-		if body.Phone != nil {
-			err = goa.MergeErrors(err, goa.ValidateFormat("body.phone", *body.Phone, goa.FormatEmail))
+			return nil, fmt.Errorf("invalid JSON for body, example of valid JSON:\n%s", "'{\n      \"email\": \"ddu\",\n      \"nickname\": \"2zc\",\n      \"password\": \"nac\",\n      \"phone\": \"18399999999\",\n      \"verify_code\": \"hrx\"\n   }'")
 		}
 		if body.Phone != nil {
 			if utf8.RuneCountInString(*body.Phone) > 11 {
 				err = goa.MergeErrors(err, goa.InvalidLengthError("body.phone", *body.Phone, utf8.RuneCountInString(*body.Phone), 11, false))
 			}
+		}
+		if body.Email != nil {
+			err = goa.MergeErrors(err, goa.ValidateFormat("body.email", *body.Email, goa.FormatEmail))
 		}
 		if body.Email != nil {
 			if utf8.RuneCountInString(*body.Email) > 120 {
